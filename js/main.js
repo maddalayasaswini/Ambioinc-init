@@ -1,9 +1,4 @@
-// ===================================
-// AMERICAN BIOSOURCES INC. - MAIN JAVASCRIPT
-// Enhanced with modern animations, lazy loading, and responsive features
-// ===================================
 
-// ===================================
 // LOADING SCREEN MANAGEMENT
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -409,11 +404,11 @@ function initializeDNAAnimation() {
     const particles = [];
     
     // Create particles
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 150; i++) {
         particles.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            size: Math.random() * 3 + 1,
+            size: Math.random() * 6 + 1,
             speedX: (Math.random() - 0.5) * 0.5,
             speedY: (Math.random() - 0.5) * 0.5,
             opacity: Math.random() * 0.5 + 0.2
@@ -437,7 +432,7 @@ function initializeDNAAnimation() {
             // Draw particle
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
+            ctx.fillStyle = `rgba(250, 250, 250, ${particle.opacity})`;
             ctx.fill();
         });
         
@@ -453,7 +448,7 @@ function initializeDNAAnimation() {
                     ctx.beginPath();
                     ctx.moveTo(particle.x, particle.y);
                     ctx.lineTo(otherParticle.x, otherParticle.y);
-                    ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
+                    ctx.strokeStyle = `rgba(250, 250, 250, ${0.1 * (1 - distance / 100)})`;
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 }

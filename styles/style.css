@@ -518,7 +518,7 @@ body {
 .headline {
   flex: 1;
   text-align: center;
-  color: var(--primary-color-1);
+  color: var(--bg-primary);
 }
 
 .headline h1 {
