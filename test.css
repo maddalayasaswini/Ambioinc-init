@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* LAYOUT */
+.split-section {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 50%;
+  background: linear-gradient(180deg, #6a00a8, #4b0082);
+  color: white;
+  padding: 80px 60px;
+}
+
+.left-content {
+  position: sticky;
+  top: 100px;
+}
+
+.left-content h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 50%;
+  background: #f2f2f2;
+  position: relative;
+}
+
+.right-scroll {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 120px 80px;
+}
+
+/* EACH STEP */
+.scroll-section {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* 🔥 MIDDLE CIRCLE */
+.circle-number {
+  position: relative;
+  left: -110px;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: #2d003f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 20;
+}
+
+/* RIGHT TEXT */
+.scroll-section h2 {
+  font-size: 36px;
+  color: #5a007f;
+  margin-bottom: 20px;
+}
+
+.scroll-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}

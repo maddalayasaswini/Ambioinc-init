@@ -1,0 +1,141 @@
+/* SECTION BACKGROUND */
+.our-story {
+  position: relative;
+  top: var(--relative-top);
+  background-color: #fff;
+  padding: 80px 0;
+  color: var(--primary-color-1);
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* FLEX LAYOUT */
+.our-story-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.our-story-content {
+  flex: 1;
+}
+
+.our-story-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.our-story-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* RIGHT SIDE IMAGE */
+.our-story-image {
+  flex: 1;
+  text-align: right;
+}
+
+.our-story-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .our-story-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-story-image {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .our-story-title {
+    font-size: 36px;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Heading Section */
+.text_section {
+  position: relative;
+  top: var(--relative-top);
+  padding: 60px 0 20px;
+  text-align: center;
+  background-color: var(--primary-color-1);
+}
+
+.text_section h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* Logo Marquee Section */
+.logo-marquee {
+  position: relative;
+  top: var(--relative-top);
+  overflow: hidden;
+  padding: 40px 0;
+  background: var(--primary-color-1);
+}
+
+/* Track */
+.marquee-track {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* Individual Logo */
+.logo img {
+  height: 200px;
+  width: auto;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .text_section h2 {
+    font-size: 28px;
+  }
+
+  .marquee-track {
+    gap: 40px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
