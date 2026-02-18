@@ -1,93 +1,54 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Inter", sans-serif;
-  scroll-snap-type: y mandatory;   /* 👈 SNAP ON BODY */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* LAYOUT */
-.layout {
-  display: flex;
+.tech-section {
+    /* Background color #1e3a8a with a subtle gradient for depth */
+    background: radial-gradient(circle at 80% 50%, #2a4db3 0%, #1e3a8a 100%);
+    min-height: 100vh;
+    color: white;
+    padding: 80px 0;
 }
 
-/* LEFT PANEL */
-.left-panel {
-  width: 40%;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  padding: 60px;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #2b0a57, #4b1fa3);
-  color: white;
+.feature-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
 }
 
-/* RIGHT PANEL */
-.right-panel {
-  width: 60%;
+.feature-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
 }
 
-/* SNAP SECTIONS */
-.snap-section {
-  height: 100vh;
-  scroll-snap-align: start;   /* 👈 SNAP EACH SECTION */
-  display: flex;
-  align-items: center;
-  padding: 60px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+/* Custom Button Styling */
+.custom-btn {
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-/* CONTENT */
-.section-content {
-  max-width: 500px;
+.custom-btn:hover {
+    background-color: white;
+    color: #1e3a8a;
+    border-color: white;
 }
 
-.badge {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #5e2bcf, #8a4dff);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(90, 50, 200, 0.25);
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .left-panel {
+/* Placeholder for the microscopic/cell image */
+.abstract-graphic {
     width: 100%;
-    position: relative;
-    height: auto;
-  }
-
-  .right-panel {
-    width: 100%;
-  }
-
-  body {
-    scroll-snap-type: none;
-  }
-
-  .snap-section {
-    height: auto;
-  }
+    height: 400px;
+    background: url('https://via.placeholder.com/600x600/ffffff/000000?text=Cell+Graphic') center/contain no-repeat;
+    opacity: 0.2; /* Softens the image to match the original feel */
+    filter: blur(2px);
 }

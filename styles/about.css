@@ -35,13 +35,103 @@ section#intro {
     width: 90%;
   }
 }
+/* Mission and Vision */
+.features-section {  
+  position: relative;
+  top: var(--relative-top);
+  padding: 80px 20px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: linear-gradient(15deg, #345bc7, #162e6f);
+  color: white;
+  width: 350px;
+  padding: 30px 30px;
+  text-align: center;
+  position: relative;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Top Small Red Dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px #ef4444;
+}
+
+/* about us paragrpahs */
+.about-section {
+  position: relative;
+  top: var(--relative-top);
+  background-image: url("/asserts/images/Background/1.png"); /* Replace with your image */
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
+
+/* Optional dark overlay for better readability */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.about-content {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  z-index: 2;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
 
 /* About Info Section - Enhanced */
 .info-section {
     position: relative;
     top: var(--relative-top);
     padding: var(--space-20) 0;
-    /* background: linear-gradient(135deg, var(--bg-secondary) 0%, #f1f5f9 100%); */
     overflow: hidden;
 }
 
