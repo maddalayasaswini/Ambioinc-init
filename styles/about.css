@@ -97,7 +97,7 @@ section#intro {
   position: relative;
   top: var(--relative-top);
   background-image: url("/asserts/images/Background/1.png"); /* Replace with your image */
-  padding: 100px 20px;
+  padding: 80px 10px;
   color: white;
   position: relative;
 }
