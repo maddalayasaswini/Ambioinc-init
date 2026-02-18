@@ -1,87 +1,93 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  scroll-snap-type: y mandatory;   /* 👈 SNAP ON BODY */
 }
 
 /* LAYOUT */
-.split-section {
+.layout {
   display: flex;
-  height: 100vh;
 }
 
 /* LEFT PANEL */
 .left-panel {
-  width: 50%;
-  background: linear-gradient(180deg, #6a00a8, #4b0082);
-  color: white;
-  padding: 80px 60px;
-}
-
-.left-content {
+  width: 40%;
   position: sticky;
-  top: 100px;
-}
-
-.left-content h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  margin-bottom: 30px;
+  top: 0;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #2b0a57, #4b1fa3);
+  color: white;
 }
 
 /* RIGHT PANEL */
 .right-panel {
-  width: 50%;
-  background: #f2f2f2;
-  position: relative;
+  width: 60%;
 }
 
-.right-scroll {
+/* SNAP SECTIONS */
+.snap-section {
   height: 100vh;
-  overflow-y: auto;
-  padding: 120px 80px;
+  scroll-snap-align: start;   /* 👈 SNAP EACH SECTION */
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
-/* EACH STEP */
-.scroll-section {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 80px;
+/* CONTENT */
+.section-content {
+  max-width: 500px;
 }
 
-/* 🔥 MIDDLE CIRCLE */
-.circle-number {
-  position: relative;
-  left: -110px;
-  top: 20%;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
-  background: #2d003f;
-  color: white;
+.badge {
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
+  background: linear-gradient(135deg, #5e2bcf, #8a4dff);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-weight: bold;
-  z-index: 20;
-}
-
-/* RIGHT TEXT */
-.scroll-section h2 {
-  font-size: 36px;
-  color: #5a007f;
+  font-weight: 600;
   margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(90, 50, 200, 0.25);
 }
 
-.scroll-section p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+
+  body {
+    scroll-snap-type: none;
+  }
+
+  .snap-section {
+    height: auto;
+  }
 }

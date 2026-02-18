@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Middle Circle Scroll Layout</title>
-  <link rel="stylesheet" href="./test.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combinatorial Barcoding</title>
+  <link rel="stylesheet" href="./test.css" />
 </head>
 <body>
-
-<section class="split-section">
-
-  <!-- LEFT PANEL -->
-  <div class="left-panel">
-    <div class="left-content">
-      <h1>Combinatorial<br>barcoding with<br>Evercode™</h1>
-      <p>
-        It all starts with Evercode™ split-pool combinatorial barcoding...
-      </p>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
     </div>
+
+  <div class="layout">
+
+    <aside class="left-panel">
+      <div class="left-content">
+        <h1>Combinatorial barcoding with Evercode™</h1>
+        <p>
+          Unlock scalable single-cell analysis with advanced combinatorial
+          indexing and streamlined workflows.
+        </p>
+      </div>
+    </aside>
+
+    <main class="right-panel">
+
+      <section class="snap-section">
+        <div class="section-content">
+          <div class="badge">1</div>
+          <h2>Cell Barcoding</h2>
+          <p>Unique molecular barcodes are introduced early.</p>
+        </div>
+      </section>
+
+      <section class="snap-section">
+        <div class="section-content">
+          <div class="badge">2</div>
+          <h2>Library Preparation</h2>
+          <p>Efficient indexing reduces hands-on time.</p>
+        </div>
+      </section>
+
+      <section class="snap-section">
+        <div class="section-content">
+          <div class="badge">3</div>
+          <h2>Sequencing & Analysis</h2>
+          <p>Optimized compatibility for high-quality data.</p>
+        </div>
+      </section>
+
+    </main>
+
   </div>
-
-  <!-- RIGHT PANEL -->
-  <div class="right-panel">
-    <div class="right-scroll">
-
-      <!-- STEP 1 -->
-      <div class="scroll-section">
-        <div class="circle-number">1</div>
-        <h2>Split</h2>
-        <p>The library preparation begins here.</p>
-      </div>
-
-      <!-- STEP 2 -->
-      <div class="scroll-section">
-        <div class="circle-number">2</div>
-        <h2>Pool</h2>
-        <p>Cells are pooled and redistributed.</p>
-      </div>
-
-      <!-- STEP 3 -->
-      <div class="scroll-section">
-        <div class="circle-number">3</div>
-        <h2>Barcode</h2>
-        <p>Unique barcode combinations assigned.</p>
-      </div>
-
-      <!-- STEP 4 -->
-      <div class="scroll-section">
-        <div class="circle-number">4</div>
-        <h2>Library Prep</h2>
-        <p>Adapters appended for sequencing.</p>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<script src="./test.js"></script>
 
 </body>
+
 </html>
